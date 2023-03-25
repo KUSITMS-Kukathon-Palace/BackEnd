@@ -25,7 +25,10 @@ public class Reserve extends BaseTime {
     private Long reserveId;
 
     @Column(nullable = false)
-    private LocalDateTime reserveDate;
+    private LocalDateTime reserveStart;
+
+    @Column(nullable = false)
+    private LocalDateTime reserveEnd;
 
     @Column(nullable = false)
     private Long reservePeople;
