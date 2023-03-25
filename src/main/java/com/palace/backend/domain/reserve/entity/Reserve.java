@@ -2,17 +2,13 @@ package com.palace.backend.domain.reserve.entity;
 
 import com.palace.backend.domain.member.entity.Member;
 import com.palace.backend.domain.place.entity.Place;
-import com.palace.backend.domain.reserve.dto.ReqReserveDto;
+import com.palace.backend.domain.reserve.dto.req.ReqReserveDto;
 import com.palace.backend.global.config.BaseTime;
 import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
-@Data
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -47,14 +43,20 @@ public class Reserve extends BaseTime {
     @Column(length = 300, nullable = false)
     private String purpose;
 
-    @Column(length = 300, nullable = false)
+    @Column(length = 300)
     private String request;
+
+    private Long approve;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
 
-    public static Reserve createReserve(ReqReserveDto reqReserveDto) {
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "place_id")
+    private Place place;
+
+    public static Reserve createReserve(ReqReserveDto reqReserveDto, Place place) {
         Reserve reserve = Reserve.builder()
                 .reserveStart(reqReserveDto.getReserveStart())
                 .reserveEnd(reqReserveDto.getReserveEnd())
@@ -64,6 +66,8 @@ public class Reserve extends BaseTime {
                 .groupName(reqReserveDto.getGroupName())
                 .purpose(reqReserveDto.getPurpose())
                 .request(reqReserveDto.getRequest())
+                .approve(reqReserveDto.getApprove())
+                .place(place)
                 .build();
 
         return reserve;

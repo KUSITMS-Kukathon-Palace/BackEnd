@@ -1,4 +1,4 @@
-package com.palace.backend.domain.reserve.dto;
+package com.palace.backend.domain.reserve.dto.req;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,6 +14,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Data
 public class ReqReserveDto {
+    @NotNull(message = "place는 비어있을 수 없습니다.")
+    private String place;
+
+    @NotNull(message = "school은 비어있을 수 없습니다.")
+    private String school;
 
     @NotNull(message = "reserveStart는 비어있을 수 없습니다.")
     private LocalDateTime reserveStart;
@@ -39,5 +44,7 @@ public class ReqReserveDto {
 
     @NotBlank(message = "request는 비어있을 수 없습니다.")
     private String request;
+
+    private Long approve;
 
 }
