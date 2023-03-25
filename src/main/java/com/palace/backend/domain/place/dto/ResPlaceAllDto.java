@@ -8,7 +8,7 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PlaceAllRes {
+public class ResPlaceAllDto {
 
     private String placeName;
     private String location;
