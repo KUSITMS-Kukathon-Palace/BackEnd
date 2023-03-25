@@ -6,7 +6,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-@Data
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -52,7 +51,6 @@ public class Place extends BaseTime {
     @Column(length = 100, nullable = false)
     private String accessWay;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "reserve_id")
+    @OneToOne(mappedBy = "place")
     private Reserve reserve;
 }
