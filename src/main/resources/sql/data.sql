@@ -1,0 +1,26 @@
+DELETE FROM place;
+DELETE FROM equipment;
+
+INSERT INTO place(place_id, category, name, school, max, start_date, end_date, price, place, manager_name, manager_phone, access_way) VALUES (1, "세미나실", "경영관 SKT홀", "한양대학교", 300, "2023-01-01", "2023-04-30", 600000, "서울특별시 성동구 왕십리로 222 한양대학교 경영관", "김상수", "010-4739-1907", "공간출입 전, 행정팀에 방문해 방문대장을 작성해야 합니다");
+INSERT INTO place(place_id, category, name, school, max, start_date, end_date, price, place, manager_name, manager_phone, access_way) VALUES (2, "세미나실", "한양플라자(학생복지관) 연습실", "한양대학교", 80, "2023-01-01", "2023-04-30", 500000, "서울특별시 성동구 왕십리로 222 한양대학교 학생복지관", "박창섭", "010-5547-6632", "본교에 재/휴학중인 이의 학생증으로 출입가능하며 본교 학생을 포함한 단체에게만 대관 허가 가능합니다.");
+INSERT INTO place(place_id, category, name, school, max, start_date, end_date, price, place, manager_name, manager_phone, access_way) VALUES (3, "세미나실", "HIT 6층 세미나실", "한양대학교", 50, "2023-01-01", "2023-03-31" , 300000, "서울특별시 성동구 왕십리로 222 한양대학교 HIT", "장상길", "010-8994-8091", "공간 사용 최소 5시간 전 본교 건물 행정팀 방문 후 임시 출입증을 발급해 출입합니다.");
+INSERT INTO place(place_id, category, name, school, max, start_date, end_date, price, place, manager_name, manager_phone, access_way) VALUES (4, "체육관", "학생회관 체육관", "한양대학교", 200, "2023-01-01", "2023-03-31", 600000, "서울특별시 성동구 왕십리로 222  학생회관", "김민지", "010-3586-3040", "공간출입 전, 행정팀에 방문해 방문대장을 작성해야 합니다");
+INSERT INTO place(place_id, category, name, school, max, start_date, end_date, price, place, manager_name, manager_phone, access_way) VALUES (5, "체육관", "올림픽체육관 B1", "한양대학교", 400, "2023-01-01", "2023-03-31", 600000, "서울특별시 성동구 왕십리로 222  올림픽체육관", "최혜영", "010-2586-1059", "공간 사용 최소 5시간 전 본교 건물 행정팀 방문 후 임시 출입증을 발급해 출입합니다.");
+INSERT INTO place(place_id, category, name, school, max, start_date, end_date, price, place, manager_name, manager_phone, access_way) VALUES (6, "세미나실", "세미나실", "홍익대학교", 50, "2023-01-01", "2023-03-31", 300000, "서울특별시 마포구 와우산로 94", "한혁", "010-9080-4458", "공간출입 전, 행정팀에 방문해 방문대장을 작성해야 합니다.");
+INSERT INTO place(place_id, category, name, school, max, start_date, end_date, price, place, manager_name, manager_phone, access_way) VALUES (7, "세미나실", "대회의실", "홍익대학교", 200, "2023-01-01", "2023-04-30", 600000, "서울특별시 마포구 와우산로 94", "이은영", "010-1654-7740", "공간출입 전, 행정팀에 방문해 방문대장을 작성해야 합니다.");
+INSERT INTO place(place_id, category, name, school, max, start_date, end_date, price, place, manager_name, manager_phone, access_way) VALUES (8, "세미나실", "첨단강의실(국제회의장)", "홍익대학교", 327, "2023-01-01", "2023-04-30", 600000, "서울특별시 마포구 와우산로 94", "최윤석", "010-7854-2260", "공간 사용 최소 5시간 전 본교 건물 행정팀 방문 후 임시 출입증을 발급해 출입합니다.");
+INSERT INTO place(place_id, category, name, school, max, start_date, end_date, price, place, manager_name, manager_phone, access_way) VALUES (9, "세미나실", "프로젝트룸 Make", "숭실대학교", 40, "2023-01-01", "2023-03-31", 300000, "서울특별시 동작구 상도로 369 숭실대학교 벤처중소기업센터 2F", "전정훈", "010-9865-4454", "본교에 재/휴학중인 이의 학생증으로 출입가능하며 본교 학생을 포함한 단체에게만 대관 허가 가능합니다.");
+INSERT INTO place(place_id, category, name, school, max, start_date, end_date, price, place, manager_name, manager_phone, access_way) VALUES (10, "멀티미디어실", "프로젝트룸 Passion", "숭실대학교", 20, "2023-01-01", "2023-04-30", 200000, "서울특별시 동작구 상도로 369 숭실대학교 벤처중소기업센터 1F", "임성채", "010-3330-6458", "본교에 재/휴학중인 이의 학생증으로 출입가능하며 본교 학생을 포함한 단체에게만 대관 허가 가능합니다.");
+INSERT INTO place(place_id, category, name, school, max, start_date, end_date, price, place, manager_name, manager_phone, access_way) VALUES (11, "세미나실", "프로젝트룸 Make", "숭실대학교", 72, "2023-01-01", "2023-03-31", 600000, "서울특별시 동작구 상도로 369 숭실대학교 벤처중소기업센터 3F", "남현우", "010-8703-2465", "공간출입 전, 행정팀에 방문해 방문대장을 작성해야 합니다");
+
+INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1);
+INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (2, 0, 1, 1, 1, 0, 0, 0, 0, 0, 2);
+INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (3, 0, 1, 1, 1, 0, 0, 0, 0, 0, 3);
+INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (4, 0, 0, 0, 0, 0, 0, 1, 1, 1, 4);
+INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (5, 0, 0, 0, 0, 0, 0, 1, 1, 1, 5);
+INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (6, 0, 0, 0, 1, 1, 1, 0, 0, 0, 6);
+INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (7, 1, 1, 1, 0, 0, 0, 0, 0, 0, 7);
+INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (8, 0, 1, 1, 0, 1, 0, 0, 0, 0, 8);
+INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (9, 0, 0, 1, 1, 1, 0, 0, 0, 0, 9);
+INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (10, 0, 0, 1, 1, 1, 0, 0, 0, 0, 10);
+INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (11, 1, 1, 1, 0, 0, 0, 0, 0, 0, 11);

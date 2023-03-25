@@ -15,3 +15,9 @@ spring:
     database: mysql
     # Initial Data config
     defer-datasource-initialization: true
+  sql:
+    init:
+      data-locations: classpath:/sql/*
+      mode: always
+      separator: ^;
+    database: mysql
