@@ -8,6 +8,5 @@ import org.springframework.data.repository.query.Param;
 
 public interface EquipmentRepository extends JpaRepository<Equipment, Long> {
 
-    @Query(value = "select e.place_id from equipment e where e.name = :name", nativeQuery = true)
-    Long findPlaceId(@Param("name") String name);
+
 }

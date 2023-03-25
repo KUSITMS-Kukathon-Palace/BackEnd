@@ -1,11 +1,16 @@
 package com.palace.backend.domain.place.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.palace.backend.domain.equipment.entity.Equipment;
 import com.palace.backend.domain.reserve.entity.Reserve;
 import com.palace.backend.global.config.BaseTime;
 import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -53,4 +58,8 @@ public class Place extends BaseTime {
 
     @OneToOne(mappedBy = "place")
     private Reserve reserve;
+
+    @OneToMany(mappedBy = "place")
+    @JsonBackReference
+    private List<Equipment> equipments = new ArrayList<>();
 }

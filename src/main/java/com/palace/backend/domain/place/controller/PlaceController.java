@@ -1,5 +1,6 @@
 package com.palace.backend.domain.place.controller;
 
+import com.palace.backend.domain.equipment.entity.Equipment;
 import com.palace.backend.domain.place.dto.ResPlaceAllDto;
 import com.palace.backend.domain.place.dto.ResPlaceDetailDto;
 import com.palace.backend.domain.place.entity.Place;
@@ -50,8 +51,12 @@ public class PlaceController {
         // req 속 name(placeName) 에 해당하는 place_id 를 찾아서, equipment 레코드에서 값이 1인 column list 반환
         Long findPlaceId = placeService.getPlaceId(name);
 
+        // id -> place 객체 -> place 속 equipment 객체 리스트 get
+        Place findPlace = placeService.getPlace(findPlaceId);
+        List<Equipment> equipments = findPlace.getEquipments();
 
-        return new ResponseEntity<>(new Result(detailRes, findPlaceId), HttpStatus.OK);
+
+        return new ResponseEntity<>(new Result(detailRes, findPlaceId, equipments), HttpStatus.OK);
     }
 
     @Data
@@ -59,7 +64,7 @@ public class PlaceController {
     static class Result<T> {
         private T detail;
         private Long placeId;
-//        private ResEquipmentDetailDto equipmentList;
+        private List<Equipment> equipmentList;
     }
 
 }
