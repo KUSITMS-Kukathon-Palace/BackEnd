@@ -29,10 +29,10 @@ public class Place extends BaseTime {
     private long max;
 
     @Column(nullable = false)
-    private LocalDateTime startDate;
+    private String startDate;
 
     @Column(nullable = false)
-    private LocalDateTime endDate;
+    private String endDate;
 
     @Column(nullable = false)
     private long price;
