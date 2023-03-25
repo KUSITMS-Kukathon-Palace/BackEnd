@@ -1,15 +1,11 @@
 package com.palace.backend.domain.place.entity;
 
-import com.palace.backend.domain.member.entity.Member;
 import com.palace.backend.domain.reserve.entity.Reserve;
 import com.palace.backend.global.config.BaseTime;
 import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
 @Data
 @Getter
 @AllArgsConstructor
