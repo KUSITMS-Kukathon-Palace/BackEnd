@@ -1,5 +1,6 @@
 package com.palace.backend.domain.equipment.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.palace.backend.domain.place.entity.Place;
 import com.palace.backend.domain.reserve.entity.Reserve;
 import com.palace.backend.global.config.BaseTime;
@@ -8,7 +9,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Data
+//@Data
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -21,17 +22,10 @@ public class Equipment extends BaseTime {
     @Column(name = "equipment_id")
     private Long equipmentId;
 
-    private Boolean internet;
-    private Boolean beam;
-    private Boolean mike;
-    private Boolean board;
-    private Boolean multi;
-    private Boolean record;
-    private Boolean shower;
-    private Boolean beverage;
-    private Boolean food;
+    private String name;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonManagedReference
     @JoinColumn(name = "place_id")
     private Place place;
 
