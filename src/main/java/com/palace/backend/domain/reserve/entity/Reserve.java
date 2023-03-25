@@ -2,6 +2,7 @@ package com.palace.backend.domain.reserve.entity;
 
 import com.palace.backend.domain.member.entity.Member;
 import com.palace.backend.domain.place.entity.Place;
+import com.palace.backend.domain.reserve.dto.ReqReserveDto;
 import com.palace.backend.global.config.BaseTime;
 import lombok.*;
 
@@ -9,6 +10,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Data
 @Getter
@@ -51,4 +53,19 @@ public class Reserve extends BaseTime {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
+
+    public static Reserve createReserve(ReqReserveDto reqReserveDto) {
+        Reserve reserve = Reserve.builder()
+                .reserveStart(reqReserveDto.getReserveStart())
+                .reserveEnd(reqReserveDto.getReserveEnd())
+                .reservePeople(reqReserveDto.getPeople())
+                .name(reqReserveDto.getNickname())
+                .phoneNumber(reqReserveDto.getPhoneNumber())
+                .groupName(reqReserveDto.getGroupName())
+                .purpose(reqReserveDto.getPurpose())
+                .request(reqReserveDto.getRequest())
+                .build();
+
+        return reserve;
+    }
 }
