@@ -32,4 +32,8 @@ public class PlaceService {
         return placeRepository.findPlaceId(name);
     }
 
+    public Place getPlace(Long id) {
+        return placeRepository.findPlace(id);
+    }
+
 }

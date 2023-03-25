@@ -13,14 +13,6 @@ INSERT INTO place(place_id, category, name, school, max, start_date, end_date, p
 INSERT INTO place(place_id, category, name, school, max, start_date, end_date, price, place, manager_name, manager_phone, access_way) VALUES (10, "멀티미디어실", "프로젝트룸 Passion", "숭실대학교", 20, "2023-01-01", "2023-04-30", 200000, "서울특별시 동작구 상도로 369 숭실대학교 벤처중소기업센터 1F", "임성채", "010-3330-6458", "본교에 재/휴학중인 이의 학생증으로 출입가능하며 본교 학생을 포함한 단체에게만 대관 허가 가능합니다.");
 INSERT INTO place(place_id, category, name, school, max, start_date, end_date, price, place, manager_name, manager_phone, access_way) VALUES (11, "세미나실", "프로젝트룸 Make", "숭실대학교", 72, "2023-01-01", "2023-03-31", 600000, "서울특별시 동작구 상도로 369 숭실대학교 벤처중소기업센터 3F", "남현우", "010-8703-2465", "공간출입 전, 행정팀에 방문해 방문대장을 작성해야 합니다");
 
-INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1);
-INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (2, 0, 1, 1, 1, 0, 0, 0, 0, 0, 2);
-INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (3, 0, 1, 1, 1, 0, 0, 0, 0, 0, 3);
-INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (4, 0, 0, 0, 0, 0, 0, 1, 1, 1, 4);
-INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (5, 0, 0, 0, 0, 0, 0, 1, 1, 1, 5);
-INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (6, 0, 0, 0, 1, 1, 1, 0, 0, 0, 6);
-INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (7, 1, 1, 1, 0, 0, 0, 0, 0, 0, 7);
-INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (8, 0, 1, 1, 0, 1, 0, 0, 0, 0, 8);
-INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (9, 0, 0, 1, 1, 1, 0, 0, 0, 0, 9);
-INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (10, 0, 0, 1, 1, 1, 0, 0, 0, 0, 10);
-INSERT INTO equipment(equipment_id, internet, beam, mike, board, multi, record, shower, beverage, food, place_id) VALUES (11, 1, 1, 1, 0, 0, 0, 0, 0, 0, 11);
+INSERT INTO equipment(equipment_id, name, place_id) VALUES (1, "빔", 1);
+INSERT INTO equipment(equipment_id, name, place_id) VALUES (2, "멀티탭", 1);
+INSERT INTO equipment(equipment_id, name, place_id) VALUES (3, "와이파이", 1);

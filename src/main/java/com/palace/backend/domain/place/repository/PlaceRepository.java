@@ -20,4 +20,7 @@ public interface PlaceRepository extends JpaRepository<Place, Long> {
 
     @Query(value = "select p.place_id from place p where p.name = :name", nativeQuery = true)
     Long findPlaceId(@Param("name") String name);
+
+    @Query(value = "select * from place p where p.place_id = :id", nativeQuery = true)
+    Place findPlace(@Param("id") Long id);
 }
