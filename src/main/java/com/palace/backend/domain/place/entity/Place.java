@@ -25,6 +25,9 @@ public class Place extends BaseTime {
     @Column(length = 40, nullable = false)
     private String name;
 
+    @Column(length = 20, nullable = false)
+    private String school;
+
     @Column(nullable = false)
     private long max;
 
